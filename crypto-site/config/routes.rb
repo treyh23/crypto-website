@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :installs
+  resources :cryptos
+  devise_for :users
 root 'home#index'
 get 'home/lookup'
 get 'home/about'

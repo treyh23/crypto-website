@@ -2,7 +2,7 @@
 
 <p>
   <strong>Symbol:</strong>
-  <%= @crypto.symbol %>
+  <%= @crypto.symbol.upcase %>
 </p>
 
 <p>
@@ -11,7 +11,7 @@
 </p>
 
 <p>
-  <strong>Cost per:</strong>
+  <strong>Cost Paid</strong>
   <%= @crypto.cost_per %>
 </p>
 
@@ -21,4 +21,6 @@
 </p>
 
 <%= link_to 'Edit', edit_crypto_path(@crypto) %> |
-<%= link_to 'Back', cryptos_path %>
+<%= link_to 'Delete', crypto_path(@crypto), method: :delete, data: { confirm: 'Are you sure?' } %> |
+<%= link_to 'Back', cryptos_path %> 
+
